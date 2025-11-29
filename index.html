@@ -1,1 +1,255 @@
-<h1>Hello world!</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heart House Elim - Coming Soon</title>
+
+  <meta name="description" content="Heart House Elim - Elim Oasis Church and Reset Church are becoming one. A Spirit-led community to heal, grow, and find fresh hope in Jesus. Services Sundays 10:30am." />
+  <meta name="robots" content="all" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Heart House Elim - Coming Soon" />
+  <meta property="og:description" content="We’re creating a new website as Elim Oasis Church and Reset Church come together to form Heart House Elim. Sundays 10:30am at St Peter’s." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hearthouseelim.co.uk/" />
+
+  <!-- Styling -->
+  <style>
+    :root{
+      --bg: #0f172a;         /* slate-900 */
+      --bg-2: #111827;       /* gray-900 */
+      --card: #111827;       /* gray-900 */
+      --text: #e5e7eb;       /* gray-200 */
+      --muted: #cbd5e1;      /* slate-300 */
+      --accent: #f59e0b;     /* amber-500 */
+      --accent-2: #fde68a;   /* amber-200 */
+      --link: #93c5fd;       /* blue-300 */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --maxw: 860px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f5f5f4;       /* stone-100 */
+        --bg-2: #e7e5e4;     /* stone-200 */
+        --card: #ffffff;
+        --text: #1f2937;     /* gray-800 */
+        --muted: #374151;    /* gray-700 */
+        --accent: #b45309;   /* amber-700 */
+        --accent-2: #92400e;
+        --link: #1d4ed8;     /* blue-700 */
+        --shadow: 0 10px 30px rgba(0,0,0,.12);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1000px 600px at 10% -10%, rgba(245, 158, 11, .25), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(253, 224, 71, .18), transparent 60%),
+        linear-gradient(160deg, var(--bg), var(--bg-2));
+      display: grid;
+      place-items: center;
+      padding: 32px 18px;
+      line-height: 1.55;
+    }
+
+    .card{
+      width: 100%;
+      max-width: var(--maxw);
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 4vw, 42px);
+    }
+
+    header{
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .badge{
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      background: rgba(245, 158, 11, .12);
+      border: 1px solid rgba(245, 158, 11, .35);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    h1{
+      margin: 0;
+      font-size: clamp(28px, 4.5vw, 44px);
+      line-height: 1.15;
+    }
+
+    p.lead{
+      margin: 8px 0 18px;
+      font-size: clamp(16px, 2.2vw, 19px);
+      color: var(--muted);
+    }
+
+    .stack{ display: grid; gap: 16px; }
+
+    .divider{
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+      margin: 18px 0;
+    }
+
+    ul.points{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+    .points li{
+      display: grid;
+      gap: 6px;
+      padding-left: 36px;
+      position: relative;
+    }
+    .points li::before{
+      content: "•";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      font-size: 22px;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .where{
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    a{
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover{ text-decoration: underline; }
+
+    .contact{
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .footer-note{
+      margin-top: 18px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .brand{
+      margin-top: 6px;
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+
+    /* nice readable max-width for long lines */
+    .measure { max-width: 70ch; }
+
+    /* small screen spacing tweaks */
+    @media (max-width: 420px){
+      .points li{ padding-left: 28px; }
+      .points li::before{ left: 6px; }
+    }
+  </style>
+
+  <!-- Structured Data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Heart House Elim",
+    "url":"https://hearthouseelim.co.uk/",
+    "email":"victoria@hearthouseelim.co.uk",
+    "telephone":"+44 7752 045564",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Ranelagh Grove, St Peter’s",
+      "postalCode":"CT10 2TE",
+      "addressLocality":"Broadstairs",
+      "addressRegion":"Kent",
+      "addressCountry":"GB"
+    },
+    "sameAs":[
+      "https://www.facebook.com/"  /* replace with your Reset/Heart House Elim Facebook URL */
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="page-title">
+    <header>
+      <span class="badge" aria-hidden="true">Coming soon</span>
+      <h1 id="page-title">Heart House Elim - Coming Soon</h1>
+      <p class="lead measure">
+        We’re excited to share that Elim Oasis Church and Reset Church are coming together to form Heart House Elim - a Spirit-led community where people can heal, grow, and find fresh hope in Jesus.
+      </p>
+      <p class="measure">
+        As we merge, we’re creating a brand-new website. In the meantime, here’s everything you need to stay connected:
+      </p>
+    </header>
+
+    <section class="stack measure" aria-label="Key information">
+      <ul class="points">
+        <li>
+          <strong>We gather every Sunday at 10:30am</strong>
+          <span class="where">
+            <a href="https://www.google.com/maps/search/?api=1&query=Ranelagh+Grove,+St+Peter%E2%80%99s,+CT10+2TE" rel="noopener">Ranelagh Grove, St Peter’s, CT10 2TE</a>
+          </span>
+        </li>
+        <li>
+          You are warmly welcomed, whether you’re exploring faith, returning to church, or rebuilding after a difficult season
+        </li>
+        <li>
+          Our team is here to support you with compassion and care as we move forward together
+        </li>
+      </ul>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <p class="brand">Heart House Elim - where every heart finds home with Jesus</p>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="contact" aria-label="Contact">
+        <h2 style="margin:0;font-size:1.05rem;">Get in touch</h2>
+        <p style="margin:0;">
+          <a href="mailto:victoria@hearthouseelim.co.uk">victoria@hearthouseelim.co.uk</a>
+        </p>
+        <p style="margin:0;">
+          <a href="tel:+447752045564">07752 045564</a>
+        </p>
+      </section>
+
+      <section class="contact" aria-label="Social">
+        <h2 style="margin:0;font-size:1.05rem;">Follow updates on Facebook</h2>
+        <p style="margin:0;">
+          <a href="#" rel="noopener">Reset Facebook page</a>
+          <!-- Replace # with your real Facebook page URL -->
+        </p>
+      </section>
+
+      <p class="footer-note measure">
+        We look forward to welcoming you into the Heart House Elim family as we step into this new chapter with faith, hope, and the beautiful, tender presence of the Holy Spirit.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
