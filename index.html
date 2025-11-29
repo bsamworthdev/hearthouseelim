@@ -229,18 +229,29 @@
       <section class="contact" aria-label="Contact">
         <h2 style="margin:0;font-size:1.05rem;">Get in touch</h2>
         <p style="margin:0;">
-          <a href="mailto:victoria@hearthouseelim.co.uk">victoria@hearthouseelim.co.uk</a>
+          <span id="email-js"></span>
         </p>
         <p style="margin:0;">
-          <a href="tel:+447752045564">07752 045564</a>
+          <span id="phone-js"></span>
         </p>
+      <script>
+        // Email obfuscation
+        const emailUser = 'victoria';
+        const emailDomain = 'hearthouseelim.co.uk';
+        const email = emailUser + '@' + emailDomain;
+        document.getElementById('email-js').innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+
+        // Phone obfuscation
+        const phoneDisplay = '07752 045564';
+        const phoneHref = '+44' + '7752' + '045564';
+        document.getElementById('phone-js').innerHTML = '<a href="tel:' + phoneHref + '">' + phoneDisplay + '</a>';
+      </script>
       </section>
 
       <section class="contact" aria-label="Social">
         <h2 style="margin:0;font-size:1.05rem;">Follow updates on Facebook</h2>
         <p style="margin:0;">
-          <a href="#" rel="noopener">Reset Facebook page</a>
-          <!-- Replace # with the real Facebook URL -->
+          <a href="https://www.facebook.com/resetchurchuk/" target="_blank" rel="noopener">Reset Facebook page</a>
         </p>
       </section>
 
