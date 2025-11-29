@@ -14,17 +14,16 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hearthouseelim.co.uk/" />
 
-  <!-- Styling -->
   <style>
     :root{
-      --bg: #0f172a;         /* slate-900 */
-      --bg-2: #111827;       /* gray-900 */
-      --card: #111827;       /* gray-900 */
-      --text: #e5e7eb;       /* gray-200 */
-      --muted: #cbd5e1;      /* slate-300 */
-      --accent: #f59e0b;     /* amber-500 */
-      --accent-2: #fde68a;   /* amber-200 */
-      --link: #93c5fd;       /* blue-300 */
+      --bg: #0f172a;
+      --bg-2: #111827;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --accent: #f59e0b;
+      --accent-2: #fde68a;
+      --link: #93c5fd;
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius: 18px;
       --maxw: 860px;
@@ -32,32 +31,33 @@
 
     @media (prefers-color-scheme: light){
       :root{
-        --bg: #f5f5f4;       /* stone-100 */
-        --bg-2: #e7e5e4;     /* stone-200 */
+        --bg: #f5f5f4;
+        --bg-2: #e7e5e4;
         --card: #ffffff;
-        --text: #1f2937;     /* gray-800 */
-        --muted: #374151;    /* gray-700 */
-        --accent: #b45309;   /* amber-700 */
+        --text: #1f2937;
+        --muted: #374151;
+        --accent: #b45309;
         --accent-2: #92400e;
-        --link: #1d4ed8;     /* blue-700 */
+        --link: #1d4ed8;
         --shadow: 0 10px 30px rgba(0,0,0,.12);
       }
     }
 
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    html, body { height: 100%; margin: 0; }
+
     body{
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
       color: var(--text);
+      line-height: 1.55;
       background:
         radial-gradient(1000px 600px at 10% -10%, rgba(245, 158, 11, .25), transparent 60%),
         radial-gradient(900px 500px at 110% 10%, rgba(253, 224, 71, .18), transparent 60%),
         linear-gradient(160deg, var(--bg), var(--bg-2));
+      background-attachment: fixed; /* background now fixed */
       display: grid;
       place-items: center;
       padding: 32px 18px;
-      line-height: 1.55;
     }
 
     .card{
@@ -70,11 +70,7 @@
       padding: clamp(20px, 4vw, 42px);
     }
 
-    header{
-      display: grid;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
+    header{ display: grid; gap: 8px; margin-bottom: 18px; }
 
     .badge{
       display: inline-block;
@@ -160,17 +156,14 @@
       letter-spacing: .2px;
     }
 
-    /* nice readable max-width for long lines */
     .measure { max-width: 70ch; }
 
-    /* small screen spacing tweaks */
     @media (max-width: 420px){
       .points li{ padding-left: 28px; }
       .points li::before{ left: 6px; }
     }
   </style>
 
-  <!-- Structured Data (SEO) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -188,7 +181,8 @@
       "addressCountry":"GB"
     },
     "sameAs":[
-      "https://www.facebook.com/"  /* replace with your Reset/Heart House Elim Facebook URL */
+      "https://resetchurch.co.uk/",
+      "https://elimoasischurch.co.uk/"
     ]
   }
   </script>
@@ -199,7 +193,11 @@
       <span class="badge" aria-hidden="true">Coming soon</span>
       <h1 id="page-title">Heart House Elim - Coming Soon</h1>
       <p class="lead measure">
-        We’re excited to share that Elim Oasis Church and Reset Church are coming together to form Heart House Elim - a Spirit-led community where people can heal, grow, and find fresh hope in Jesus.
+        We’re excited to share that 
+        <a href="https://elimoasischurch.co.uk/" rel="noopener">Elim Oasis Church</a> 
+        and 
+        <a href="https://resetchurch.co.uk/" rel="noopener">Reset Church</a> 
+        are coming together to form Heart House Elim - a Spirit-led community where people can heal, grow, and find fresh hope in Jesus.
       </p>
       <p class="measure">
         As we merge, we’re creating a brand-new website. In the meantime, here’s everything you need to stay connected:
@@ -242,7 +240,7 @@
         <h2 style="margin:0;font-size:1.05rem;">Follow updates on Facebook</h2>
         <p style="margin:0;">
           <a href="#" rel="noopener">Reset Facebook page</a>
-          <!-- Replace # with your real Facebook page URL -->
+          <!-- Replace # with the real Facebook URL -->
         </p>
       </section>
 
